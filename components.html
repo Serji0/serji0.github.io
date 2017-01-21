@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<head>
+    <title>Как пользоваться</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <a href="index.html"><img src="images/docker_logo.png" class="logo"></a>
+    <div class="row">
+        <div class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                        <span class="sr-only">Open</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collaps navbar-collapse" id="responsive-menu">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="history.html">История создания</a></li>
+                        <li><a href="advantages.html">Преимущества</a></li>
+                        <li><a href="comparison.html">Сравнение</a></li>
+                        <li><a href="components.html">Компоненты</a></li>
+                        <li><a href="about.html">Дополнительно</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h3 class="title">Компоненты</h3>
+        <br>
+        <p>
+        <h4><b>Образы</b></h4>
+        Docker-образ — это read-only шаблон. Например, образ может содержать операционную систему Ubuntu c
+        веб-сервером Nginx и приложением на ней. Образы используются для создания контейнеров. Docker позволяет
+        легко создавать новые образы и обновлять существующие. Каждый образ состоит из набора уровней. Docker
+        использует UnionFile System для сочетания этих уровней в один образ. Union File System позволяет файлам и
+        директориями из разных файловых систем (разным ветвям) прозрачно накладываться, создавая когерентную
+        файловую систему. Одна из причин, по которой docker легковесен — это использование таких уровней. При
+        изменении образа (например, при обновлении приложения) создается новый уровень. Так, без замены всего образа
+        или его пересборки (как это пришлось бы сделать с виртуальной машиной) происходит лишь добавление или
+        удаление нужных уровней. Это также позволяет распространять образы проще и быстрее. В основе каждого образа
+        находится базовый образ. Например, ubuntu, базовый образ Ubuntu, или debian, базовый образ дистрибутива
+        Debian. Docker образы могут создаться из базовых образов, шаги описания для создания этих образов называются
+        «инструкциями». Каждая инструкция создает новый образ или уровень. Инструкциями будут следующие действия: ‒
+        запуск команды; ‒ добавление файла или директории; ‒ создание переменной окружения; ‒ указания что
+        запускать, когда запускается контейнер этого образа. Эти инструкции хранятся в файле Dockerfile. Docker
+        считывает Dockerfile при сборке образа, выполняет эти инструкции и возвращает конечный образ.
+        </p>
+        <p>
+        <h4><b>Реестр</b></h4>
+        Docker-реестр хранит образы. Есть публичные и приватные реестры, из которых можно скачать либо загрузить
+        образы. Существует публичный Docker-реестр с огромной коллекцией контейнеров — Docker Hub.
+        </p>
+        <p>
+        <h4><b>Контейнеры</b></h4>
+        Контейнеры похожи на директории. В контейнерах содержится все, что нужно для работы приложения. Каждый контейнер
+        создается из образа. Контейнеры могут быть созданы, запущены, остановлены, перенесены или удалены. Каждый
+        контейнер изолирован и является безопасной платформой для приложения.
+        </p>
+    </div>
+    <br>
+</div>
+<div class="footer">
+    <hr>
+    <div class="container">
+        &copy; Baskakov Sergey 2017
+    </div>
+    <br>
+</div>
+</body>
+</html>
